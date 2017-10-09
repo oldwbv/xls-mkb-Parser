@@ -22,13 +22,13 @@ namespace xls_mkb_Parser
 
         private void btnConvert_Click(object sender, EventArgs e)
         {
-            CheckConversionPossibility();
+            if (ExpSysConverter.CheckConversionPossibility(Path.GetExtension(openFD.FileName), ".mkb") == false)
+            {
+                MessageBox.Show("Error!\nНесоответствие доступных для конвертации типов");
+                return;
+            };
+            ExpSysConverter.
         }
 
-
-        private void labelFileName_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -30,8 +30,10 @@
         {
             this.openFD = new System.Windows.Forms.OpenFileDialog();
             this.btnChoose = new System.Windows.Forms.Button();
-            this.btnConvert = new System.Windows.Forms.Button();
+            this.btnConvertToMkb = new System.Windows.Forms.Button();
             this.labelFileName = new System.Windows.Forms.Label();
+            this.saveFD = new System.Windows.Forms.SaveFileDialog();
+            this.btnConvertToXlsx = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // openFD
@@ -42,21 +44,21 @@
             // 
             this.btnChoose.Location = new System.Drawing.Point(11, 27);
             this.btnChoose.Name = "btnChoose";
-            this.btnChoose.Size = new System.Drawing.Size(86, 23);
+            this.btnChoose.Size = new System.Drawing.Size(115, 23);
             this.btnChoose.TabIndex = 0;
             this.btnChoose.Text = "Choose File";
             this.btnChoose.UseVisualStyleBackColor = true;
             this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
             // 
-            // btnConvert
+            // btnConvertToMkb
             // 
-            this.btnConvert.Location = new System.Drawing.Point(103, 27);
-            this.btnConvert.Name = "btnConvert";
-            this.btnConvert.Size = new System.Drawing.Size(88, 23);
-            this.btnConvert.TabIndex = 1;
-            this.btnConvert.Text = "Convert";
-            this.btnConvert.UseVisualStyleBackColor = true;
-            this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
+            this.btnConvertToMkb.Location = new System.Drawing.Point(132, 27);
+            this.btnConvertToMkb.Name = "btnConvertToMkb";
+            this.btnConvertToMkb.Size = new System.Drawing.Size(115, 23);
+            this.btnConvertToMkb.TabIndex = 1;
+            this.btnConvertToMkb.Text = "Convert To Mkb";
+            this.btnConvertToMkb.UseVisualStyleBackColor = true;
+            this.btnConvertToMkb.Click += new System.EventHandler(this.btnConvert_Click);
             // 
             // labelFileName
             // 
@@ -67,15 +69,29 @@
             this.labelFileName.TabIndex = 3;
             this.labelFileName.Text = "File:";
             // 
+            // saveFD
+            // 
+            this.saveFD.Filter = "Excel file|*.xlsx|Expert system file|*.mkb";
+            // 
+            // btnConvertToXlsx
+            // 
+            this.btnConvertToXlsx.Location = new System.Drawing.Point(253, 27);
+            this.btnConvertToXlsx.Name = "btnConvertToXlsx";
+            this.btnConvertToXlsx.Size = new System.Drawing.Size(115, 23);
+            this.btnConvertToXlsx.TabIndex = 4;
+            this.btnConvertToXlsx.Text = "Convert To Xlsx";
+            this.btnConvertToXlsx.UseVisualStyleBackColor = true;
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(203, 58);
+            this.ClientSize = new System.Drawing.Size(378, 55);
+            this.Controls.Add(this.btnConvertToXlsx);
             this.Controls.Add(this.labelFileName);
-            this.Controls.Add(this.btnConvert);
+            this.Controls.Add(this.btnConvertToMkb);
             this.Controls.Add(this.btnChoose);
             this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -89,8 +105,10 @@
 
         private System.Windows.Forms.OpenFileDialog openFD;
         private System.Windows.Forms.Button btnChoose;
-        private System.Windows.Forms.Button btnConvert;
+        private System.Windows.Forms.Button btnConvertToMkb;
         private System.Windows.Forms.Label labelFileName;
+        private System.Windows.Forms.SaveFileDialog saveFD;
+        private System.Windows.Forms.Button btnConvertToXlsx;
     }
 }
 
