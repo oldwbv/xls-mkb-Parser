@@ -38,7 +38,7 @@
             // 
             // openFD
             // 
-            this.openFD.Filter = "Excel file|*.xlsx|Expert system file|*.mkb";
+            this.openFD.Filter = "all|*.*|Excel file|*.xlsx|Expert system file|*.mkb";
             // 
             // btnChoose
             // 
@@ -56,9 +56,10 @@
             this.btnConvertToMkb.Name = "btnConvertToMkb";
             this.btnConvertToMkb.Size = new System.Drawing.Size(115, 23);
             this.btnConvertToMkb.TabIndex = 1;
+            this.btnConvertToMkb.Tag = "";
             this.btnConvertToMkb.Text = "Convert To Mkb";
             this.btnConvertToMkb.UseVisualStyleBackColor = true;
-            this.btnConvertToMkb.Click += new System.EventHandler(this.btnConvert_Click);
+            this.btnConvertToMkb.Click += new System.EventHandler(this.btnConvertToMkb_Click);
             // 
             // labelFileName
             // 
@@ -68,6 +69,7 @@
             this.labelFileName.Size = new System.Drawing.Size(26, 13);
             this.labelFileName.TabIndex = 3;
             this.labelFileName.Text = "File:";
+            this.labelFileName.TextChanged += new System.EventHandler(this.labelFileName_TextChanged);
             // 
             // saveFD
             // 
@@ -81,6 +83,7 @@
             this.btnConvertToXlsx.TabIndex = 4;
             this.btnConvertToXlsx.Text = "Convert To Xlsx";
             this.btnConvertToXlsx.UseVisualStyleBackColor = true;
+            this.btnConvertToXlsx.Click += new System.EventHandler(this.btnConvertToXlsx_Click);
             // 
             // mainForm
             // 
